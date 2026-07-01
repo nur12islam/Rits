@@ -64,7 +64,7 @@ export default [
         const reply = await event.message.getReplyMessage();
         let target = "themself";
         if (reply && reply.senderId) {
-            target = `[user](tg://user?id=${reply.senderId})`;
+            target = `[user](tg://openmessage?user_id=${reply.senderId})`;
         }
         await event.message.edit({ text: `*Slaps ${target} around a bit with ${item}*` });
     }
