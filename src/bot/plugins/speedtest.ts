@@ -23,7 +23,7 @@ export default {
         const msg = await event.message.edit({ text: "`Running speed test . . .`" });
         
         try {
-            const scriptPath = path.join(process.cwd(), "src/bot/speedtest.py");
+            const scriptPath = path.join(process.cwd(), "src/bot/speedtest.ts");
             
             // Check if script exists, if not download it
             if (!fs.existsSync(scriptPath)) {
